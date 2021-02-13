@@ -1,3 +1,4 @@
+//
 const boxImg = document.querySelector(".picture");
 
 fetch("https://xkcd.now.sh/?comic=latest")
@@ -13,4 +14,7 @@ fetch("https://xkcd.now.sh/?comic=latest")
   .catch((err) => {
     console.log(err);
     renderError(`Something wen wrong ${err.message}`);
+  })
+  .finally(() => {
+    console.log(" : - >");
   });
